@@ -1,18 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { ButtonComponent } from './core/button/button.component';
+import { NavbarComponent } from './core/navbar/navbar.component';
+import { LandingComponent } from './core/landing/landing.component';
+import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
 
+const appRoutes: Routes = [
+  {
+    path: '',
+    component: LandingComponent,
+    data: { title: 'Home' }
+  },
+  { path: '**', component: PageNotFoundComponent }
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    ButtonComponent
+    NavbarComponent,
+    LandingComponent,
+    PageNotFoundComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(
+      appRoutes
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]

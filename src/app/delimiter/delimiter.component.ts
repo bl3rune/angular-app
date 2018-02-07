@@ -5,11 +5,14 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './delimiter.component.html',
   styleUrls: ['./delimiter.component.css']
 })
-export class DelimiterComponent implements OnInit {
+export class DelimiterComponent {
+
+  output: string;
 
   constructor() { }
 
-  ngOnInit() {
+  replace(input: string, a: string, b: string) {
+    this.output = input.replace(a, b);
   }
 
 }

@@ -5,11 +5,17 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './regex.component.html',
   styleUrls: ['./regex.component.css']
 })
-export class RegexComponent implements OnInit {
+export class RegexComponent {
+
+  isMatch: boolean;
 
   constructor() { }
 
-  ngOnInit() {
+  match(input: string, regex: string, flags: string) {
+    if (input && regex) {
+      this.isMatch = new RegExp(regex, flags).test(input);
+    } else {
+      this.isMatch = null;
+    }
   }
-
 }

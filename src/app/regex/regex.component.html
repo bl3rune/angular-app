@@ -1,3 +1,25 @@
-<p>
-  regex works!
-</p>
+<div class="row">
+  <div class="col-md-8 col-sm-7">
+    <h3 class="text-center">Input</h3>
+    <textarea class="form-control" rows="10" #input (change)="match(input.value, regex.value, flags.value)"></textarea>
+  </div>
+  <div class="col-md-4 col-sm-5">
+      <div class="row">
+        <div class="col-xs-12">
+          <h3 class="text-center">Regex:
+            <span *ngIf="isMatch === true" class="alert-success" role="alert">Matches</span>
+            <span *ngIf="isMatch === false" class="alert-danger" role="alert">Doesn't Match</span>
+          </h3>
+        </div>
+        <div class="col-xs-12">
+          <textarea class="form-control" rows="3" #regex (change)="match(input.value, regex.value, flags.value)"></textarea>
+        </div>
+        <div class="col-xs-12">
+            <h3 class="text-center">Flags:</h3>
+        </div>
+        <div class="col-xs-12">
+          <textarea class="form-control" rows="3" #flags (change)="match(input.value, regex.value, flags.value)"></textarea>
+        </div>
+      </div>
+  </div>
+</div>

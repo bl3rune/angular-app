@@ -12,7 +12,7 @@ export class DelimiterComponent {
   constructor() { }
 
   replace(input: string, a: string, b: string) {
-    this.output = input.replace(a, b);
+    this.output = input.split(a).join(b);
   }
 
 }

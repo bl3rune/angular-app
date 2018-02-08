@@ -1,3 +1,10 @@
-<p>
-  distinct works!
-</p>
+<div class="row">
+  <div class="col-sm-6">
+    <h3 class="text-center">Input</h3>
+    <textarea class="form-control" rows="10" #input (change)="distinct(input.value)"></textarea>
+  </div>
+  <div class="col-sm-6">
+      <h3 class="text-center">Output</h3>
+      <textarea class="form-control" rows="10" readonly>{{output}}</textarea>
+  </div>
+</div>

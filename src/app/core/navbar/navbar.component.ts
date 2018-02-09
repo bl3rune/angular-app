@@ -7,6 +7,12 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
-  constructor() { }
+  dropdown: boolean;
+
+  constructor() { this.dropdown = false; }
+
+  drop() {
+    this.dropdown = !this.dropdown;
+  }
 
 }

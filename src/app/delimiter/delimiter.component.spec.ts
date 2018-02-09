@@ -22,4 +22,9 @@ describe('DelimiterComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should delimit', () => {
+    component.replace('a b c', ' ', '/');
+    expect(component.output).toEqual('a/b/c');
+  });
 });

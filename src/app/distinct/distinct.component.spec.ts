@@ -22,4 +22,9 @@ describe('DistinctComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should get distinct elements', () => {
+    component.distinct('a\nb\nb\nc\nc');
+    expect(component.output).toEqual('a\nb\nc');
+  });
 });

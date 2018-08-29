@@ -12,6 +12,8 @@ import { RegexComponent } from './regex/regex.component';
 import { DistinctComponent } from './distinct/distinct.component';
 import { DiffComponent } from './diff/diff.component';
 import { SortComponent } from './sort/sort.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 const appRoutes: Routes = [
   { path: '', component: LandingComponent, data: { title: 'Home' } },
@@ -39,7 +41,8 @@ const appRoutes: Routes = [
     BrowserModule,
     RouterModule.forRoot(
       appRoutes
-    )
+    ),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

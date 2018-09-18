@@ -1,34 +1,58 @@
 <div class="row">
   <div class="col-md-5">
     <h3 class="text-center">Input</h3>
-    <textarea class="form-control" rows="10" #input></textarea>
+    <textarea class="form-control" rows="15" #input></textarea>
   </div>
   <div class="col-md-2">
       <h3 class="text-center">Delimit</h3>
       <div class="row">
-        <div class="col-md-12 col-sm-2 col-xs-6">
+        <div class="col-md-12 col-sm-3 col-xs-6">
             <div class="custom-label">Newline:</div>
         </div>
-        <div class="col-md-12 col-sm-5 col-xs-6">
+        <div class="col-md-12 col-sm-3 col-xs-6">
             <button type="button" class="btn btn-default w-100" (click)="replace(input.value, '\n', ',')">Comma</button>
         </div>
-        <div class="col-md-12 col-sm-5 col-xs-6">
+        <div class="col-md-12 col-sm-3 col-xs-6">
             <button type="button" class="btn btn-default w-100" (click)="replace(input.value, '\n', ',\n')">Comma & Newline</button>
         </div>
-        <div class="clearfix"></div>
-        <div class="col-md-12 col-sm-2 col-xs-6">
+        <div class="col-md-12 col-sm-3 col-xs-6">
+          <button type="button" class="btn btn-default w-100" (click)="replace(input.value, '\n', ' ')">Space</button>
+      </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 col-sm-3 col-xs-6">
             <div class="custom-label">Space:</div>
         </div>
-        <div class="col-md-12 col-sm-5 col-xs-6">
-            <button type="button" class="btn btn-default w-100" (click)="replace(input.value, ' ', ', ')">Comma with Space</button>
+        <div class="col-md-12 col-sm-3 col-xs-6">
+            <button type="button" class="btn btn-default w-100" (click)="replace(input.value, ' ', ',')">Comma</button>
         </div>
-        <div class="col-md-12 col-sm-5 col-xs-6">
+        <div class="col-md-12 col-sm-3 col-xs-6">
             <button type="button" class="btn btn-default w-100" (click)="replace(input.value, ' ', ',\n')">Comma & Newline</button>
+        </div>
+        <div class="col-md-12 col-sm-3 col-xs-6">
+          <button type="button" class="btn btn-default w-100" (click)="replace(input.value, ' ', '\n')">Newline</button>
+      </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 col-sm-2 col-xs-6">
+          <div class="custom-label">Input:</div>
+        </div>
+        <div class="col-md-12 col-sm-3 col-xs-6">
+          <textarea class="form-control" rows="1" #old ></textarea>
+        </div>
+        <div class="col-md-12 col-sm-2 col-xs-6">
+          <div class="custom-label">Output:</div>
+        </div>
+        <div class="col-md-12 col-sm-3 col-xs-6">
+          <textarea class="form-control" rows="1" #new ></textarea>
+        </div>
+        <div class="col-md-12 col-sm-2 col-sm-offset-0 col-xs-offset-6 col-xs-6">
+          <button type="button" class="btn btn-default w-100" (click)="replace(input.value, old.value, new.value)">Submit</button>
         </div>
       </div>
   </div>
   <div class="col-md-5">
       <h3 class="text-center">Output</h3>
-      <textarea class="form-control" rows="10" readonly>{{output}}</textarea>
+      <textarea class="form-control" rows="15" readonly>{{output}}</textarea>
   </div>
 </div>

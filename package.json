@@ -4,9 +4,9 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --ssl --open",
-    "build": "ng build --prod --base-href \"https://bl3rune.github.io/\"",
-    "deploy": "npx ngh --branch=master",
+    "start": "ng serve --prod --ssl --open",
+    "build": "ng build --prod --base-href \"https://bl3rune.github.io/\" && node build/fix-sw.js",
+    "deploy": "npm run-script build && npx ngh --branch=master",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

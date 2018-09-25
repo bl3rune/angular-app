@@ -1,6 +1,6 @@
 {
-  "name": "js-text-tools",
-  "short_name": "jstt",
+  "name": "JS Text Tools",
+  "short_name": "JS-Tools",
   "theme_color": "#202020",
   "background_color": "#202020",
   "display": "standalone",

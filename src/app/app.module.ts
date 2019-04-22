@@ -14,6 +14,7 @@ import { DiffComponent } from './diff/diff.component';
 import { SortComponent } from './sort/sort.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { ConverterComponent } from './converter/converter.component';
 
 const appRoutes: Routes = [
   { path: '', component: LandingComponent, data: { title: 'Home' } },
@@ -22,6 +23,7 @@ const appRoutes: Routes = [
   { path: 'distinct', component: DistinctComponent, data: { title: 'Distinct Elements' } },
   { path: 'diff', component: DiffComponent, data: { title: 'Diff Viewer' } },
   { path: 'sort', component: SortComponent, data: { title: 'Sorter' } },
+  { path: 'convert', component: ConverterComponent, data: { title: 'Converter' } },
   { path: '**', component: PageNotFoundComponent }
 ];
 
@@ -35,7 +37,8 @@ const appRoutes: Routes = [
     RegexComponent,
     DistinctComponent,
     DiffComponent,
-    SortComponent
+    SortComponent,
+    ConverterComponent
   ],
   imports: [
     BrowserModule,

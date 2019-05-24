@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-converter',
   templateUrl: './converter.component.html',
-  styleUrls: ['./converter.component.css']
+  styleUrls: ['./converter.component.scss']
 })
 export class ConverterComponent {
 
@@ -15,13 +15,13 @@ export class ConverterComponent {
   constructor() { }
 
   epochSecondsToDate(input: number) {
-    var date = new Date(0);
+    const date = new Date(0);
     date.setUTCSeconds(input);
     this.date1 = date;
   }
 
   epochMSecondsToDate(input: number) {
-    var date = new Date(0);
+    const date = new Date(0);
     date.setUTCMilliseconds(input);
     this.date2 = date;
   }
@@ -30,6 +30,6 @@ export class ConverterComponent {
     this.epoch = new Date(input).getUTCSeconds();
   }
 
-  MS2S(number: number): number { return Math.floor( number / 1000);}
+  MS2S(number: number): number { return Math.floor( number / 1000); }
 
 }

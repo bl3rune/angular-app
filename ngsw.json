@@ -1,24 +1,25 @@
 {
   "configVersion": 1,
+  "timestamp": 1559232437222,
   "index": "https://bl3rune.github.io/index.html", 
   "assetGroups": [
     {
-      "name": "app",
+      "name": "JSTextTools",
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
         "https://bl3rune.github.io/favicon.ico",
         "https://bl3rune.github.io/index.html",
-        "https://bl3rune.github.io/main.48ec4aa5f72735a234e0.js",
-        "https://bl3rune.github.io/polyfills.bf48117beff7f74825e8.js",
-        "https://bl3rune.github.io/runtime.26209474bfa8dc87a77c.js",
-        "https://bl3rune.github.io/styles.60a22b46669a18eb456c.css"
+        "https://bl3rune.github.io/main.7eb0447db7f3e196af4f.js",
+        "https://bl3rune.github.io/polyfills.9d6088873d2a3c33ec93.js",
+        "https://bl3rune.github.io/runtime.894772cff873e45e56d8.js",
+        "https://bl3rune.github.io/scripts.091d3f4f3258ad6e9f29.js"
       ],
       "patterns": []
     },
     {
       "name": "assets",
-      "installMode": "lazy",
+      "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
         "https://bl3rune.github.io/assets/icons/icon-128x128.png",
@@ -58,11 +59,11 @@
     "https://bl3rune.github.io/assets/images/regex.png": "c933e1fd68dfbc3ca6fe8a4f1ddc9bc46065240f",
     "https://bl3rune.github.io/assets/images/sort.png": "c706dbb4d548a91bb2e980269854e26b604ce5bf",
     "https://bl3rune.github.io/favicon.ico": "61c392820f33c1c23b8d7438a1ad4df837494171",
-    "https://bl3rune.github.io/index.html": "5c029cb945c22cb4e319057f0c6e992bef281766",
-    "https://bl3rune.github.io/main.48ec4aa5f72735a234e0.js": "e257e34a0c510ce412ed4e0fdf823d69759cf279",
-    "https://bl3rune.github.io/polyfills.bf48117beff7f74825e8.js": "edc0e79fc6315db4d76b2e7e56702677a06e24c1",
-    "https://bl3rune.github.io/runtime.26209474bfa8dc87a77c.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
-    "https://bl3rune.github.io/styles.60a22b46669a18eb456c.css": "28ffab854fba965a45c898c9ef511487f1e29325"
+    "https://bl3rune.github.io/index.html": "476a05005d2354c7099584b5b9f1b109c40cd234",
+    "https://bl3rune.github.io/main.7eb0447db7f3e196af4f.js": "d69f2ee8d0004f45a162e9320fa53ea315ea8b5d",
+    "https://bl3rune.github.io/polyfills.9d6088873d2a3c33ec93.js": "6946e10a03311677a01490b8e91741668e64e17e",
+    "https://bl3rune.github.io/runtime.894772cff873e45e56d8.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
+    "https://bl3rune.github.io/scripts.091d3f4f3258ad6e9f29.js": "01f5733fc11e5966f3de86458d3ebeab06cf49d8"
   },
   "navigationUrls": [
     {

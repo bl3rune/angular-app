@@ -1,9 +1,9 @@
 {
   "name": "JS Text Tools",
   "short_name": "JS-Tools",
-  "theme_color": "#202020",
+  "theme_color": "#6a0c7f",
   "background_color": "#202020",
-  "display": "standalone",
+  "display": "fullscreen",
   "scope": "/",
   "start_url": "/",
   "icons": [

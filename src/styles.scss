@@ -1,4 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+$body-bg: #222222;
+$body-color: $light;
+$purple: #af0aed;
+$dark-purple: #700099;
+
+$theme-colors: (
+  purple: $purple,
+  dark-purple: $dark-purple
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap";
 
 body{
   min-width:400px;        /* Suppose you want minimum width of 1000px */

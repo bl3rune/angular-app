@@ -6,45 +6,45 @@
   <div class="col-md-4">
       <h3 class="text-center">Delimit</h3>
       <div class="row">
-        <div class="col-md-6 col-sm-3 col-xs-6">
-            <div class="custom-label">Newline:</div>
+        <div class="col-md-6 col-sm-3 col-6">
+            <div class="bg-dark text-center p-2 rounded">Newline:</div>
         </div>
-        <div class="col-md-6 col-sm-3 col-xs-6">
-            <button type="button" class="btn btn-default w-100" (click)="replace(input.value, '\n', ',')">Comma</button>
+        <div class="col-md-6 col-sm-3 col-6">
+            <button type="button" class="btn btn-dark w-100" (click)="replace(input.value, '\n', ',')">Comma</button>
         </div>
-        <div class="col-md-6 col-sm-3 col-xs-6">
-            <button type="button" class="btn btn-default w-100" (click)="replace(input.value, '\n', ',\n')">Comma & Newline</button>
+        <div class="col-md-6 col-sm-3 col-6">
+            <button type="button" class="btn btn-dark w-100" (click)="replace(input.value, '\n', ',\n')">Comma & Newline</button>
         </div>
-        <div class="col-md-6 col-sm-3 col-xs-6">
-          <button type="button" class="btn btn-default w-100" (click)="replace(input.value, '\n', ' ')">Space</button>
+        <div class="col-md-6 col-sm-3 col-6">
+          <button type="button" class="btn btn-dark w-100" (click)="replace(input.value, '\n', ' ')">Space</button>
       </div>
       </div>
       <div class="row">
-        <div class="col-md-6 col-sm-3 col-xs-6">
-            <div class="custom-label">Space:</div>
+        <div class="col-md-6 col-sm-3 col-6">
+            <div class="bg-dark text-center p-2 rounded">Space:</div>
         </div>
-        <div class="col-md-6 col-sm-3 col-xs-6">
-            <button type="button" class="btn btn-default w-100" (click)="replace(input.value, ' ', ',')">Comma</button>
+        <div class="col-md-6 col-sm-3 col-6">
+            <button type="button" class="btn btn-dark w-100" (click)="replace(input.value, ' ', ',')">Comma</button>
         </div>
-        <div class="col-md-6 col-sm-3 col-xs-6">
-            <button type="button" class="btn btn-default w-100" (click)="replace(input.value, ' ', ',\n')">Comma & Newline</button>
+        <div class="col-md-6 col-sm-3 col-6">
+            <button type="button" class="btn btn-dark w-100" (click)="replace(input.value, ' ', ',\n')">Comma & Newline</button>
         </div>
-        <div class="col-md-6 col-sm-3 col-xs-6">
-          <button type="button" class="btn btn-default w-100" (click)="replace(input.value, ' ', '\n')">Newline</button>
+        <div class="col-md-6 col-sm-3 col-6">
+          <button type="button" class="btn btn-dark w-100" (click)="replace(input.value, ' ', '\n')">Newline</button>
       </div>
       </div>
       <div class="row">
-          <div class="col-md-6 col-sm-3 col-xs-6">
-              <div class="custom-label">Custom:</div>
+          <div class="col-md-6 col-sm-3 col-6">
+              <div class="bg-dark text-center p-2 rounded">Custom:</div>
           </div>
-        <div class="col-md-6 col-sm-3 col-xs-6">
+        <div class="col-md-6 col-sm-3 col-6">
           <textarea class="form-control" rows="1" #old placeholder="Input"></textarea>
         </div>
-        <div class="col-md-6 col-sm-3 col-xs-6">
+        <div class="col-md-6 col-sm-3 col-6">
           <textarea class="form-control" rows="1" #new placeholder="Output"></textarea>
         </div>
-        <div class="col-md-6 col-sm-3 col-xs-6">
-          <button type="button" class="btn btn-default w-100" (click)="replace(input.value, old.value, new.value)">Submit</button>
+        <div class="col-md-6 col-sm-3 col-6">
+          <button type="button" class="btn btn-dark w-100" (click)="replace(input.value, old.value, new.value)">Submit</button>
         </div>
       </div>
   </div>

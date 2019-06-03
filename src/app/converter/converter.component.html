@@ -1,9 +1,3 @@
-<script>
-  $(function () {
-    $("#inputDate").datepicker();
-  });
-</script>
-
 <div class="row justify-content-center">
   <div class="col-xl-4 col-lg-5 col-md">
     <h3 class="text-center">Date</h3>
@@ -24,7 +18,7 @@
 </div>
 <div class="row justify-content-center mb-3">
   <div class="col-xl-4 col-lg-5 col-md">
-    <input type="text" placeholder="Datepicker" class="form-control" #inputDate (change)="dateToEpoch(inputDate.value)" bsDatepicker>
+    <input type="text" placeholder="Datepicker" class="form-control" (bsValueChange)="dateToEpoch($event)" bsDatepicker>
   </div>
   <div class="col-xl-4 col-lg-5 col-md">
     <div class="form-control" readonly>{{epoch}}</div>
@@ -35,6 +29,6 @@
     <div class="form-control" readonly>{{date | date : 'yyyy/MM/dd hh:mm:ss z' }}</div>
   </div>
   <div class="col-xl-4 col-lg-5 col-md">
-    <input class="form-control" type="number" #inputEpoch (change)="epochMSecondsToDate(inputEpoch.value)">
+    <input class="form-control" type="number" (change)="epochMSecondsToDate($event.target.value)">
   </div>
 </div>

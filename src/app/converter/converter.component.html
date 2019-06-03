@@ -1,61 +1,40 @@
-<div class="row">
-  <div class="col-sm-2"></div>
-  <div class="col-sm-2"></div>
-  <div class="col-sm-2"></div>
-  <div class="col-sm-2"></div>
-</div>
-<div class="row">
-  <div class="col-sm-4">
+<script>
+  $(function () {
+    $("#inputDate").datepicker();
+  });
+</script>
+
+<div class="row justify-content-center">
+  <div class="col-xl-4 col-lg-5 col-md">
     <h3 class="text-center">Date</h3>
   </div>
-  <div class="col-sm-4">
-    <h3 class="row text-center">Epoch Seconds</h3>
-  </div>
-  <div class="col-sm-4">
-    <h3 class="row text-center">Epoch Milliseconds</h3>
+  <div class="col-xl-4 col-lg-5 col-md">
+    <h3 class="text-center">Epoch</h3>
   </div>
 </div>
-<div class="row">
-  <div class="col-sm-4">
+<div class="row justify-content-center mb-3">
+  <div class="col-sm-1 col-2">Now</div>
+  <div class="col-xl-3 col-lg-4 col-md col-sm-11 col-10">
     <div class="form-control" readonly>{{now | date : 'yyyy/MM/dd hh:mm:ss z'}}</div>
   </div>
-  <div class="col-sm-4">
-    <div class="form-control" readonly>{{MS2S(now)}}</div>
-  </div>
-  <div class="col-sm-4">
+  <div class="col-sm-1 col-2">Millis</div>
+  <div class="col-xl-3 col-lg-4 col-md col-sm-11 col-10">
     <div class="form-control" readonly>{{now}}</div>
   </div>
 </div>
-<div class="row">
-  <div class="col-sm-4">
-    <input class="form-control" type="date" #inputDate (change)="dateToEpoch(inputDate.value)">
+<div class="row justify-content-center mb-3">
+  <div class="col-xl-4 col-lg-5 col-md">
+    <input type="text" placeholder="Datepicker" class="form-control" #inputDate (change)="dateToEpoch(inputDate.value)" bsDatepicker>
   </div>
-  <div class="col-sm-4">
-    <div class="form-control" readonly>{{epoch ? MS2S(epoch) : ''}}</div>
-  </div>
-  <div class="col-sm-4">
+  <div class="col-xl-4 col-lg-5 col-md">
     <div class="form-control" readonly>{{epoch}}</div>
   </div>
 </div>
-<div class="row">
-  <div class="col-sm-4">
-    <div class="form-control" readonly>{{date1 | date : 'yyyy/MM/dd hh:mm:ss z' }}</div>
+<div class="row justify-content-center mb-3">
+  <div class="col-xl-4 col-lg-5 col-md">
+    <div class="form-control" readonly>{{date | date : 'yyyy/MM/dd hh:mm:ss z' }}</div>
   </div>
-  <div class="col-sm-4">
-      <input class="form-control" type="number" #inputEpochS (change)="epochSecondsToDate(inputEpochS.value)">
-  </div>
-  <div class="col-sm-4">
-    <div class="form-control" readonly>{{inputEpochS.value ? inputEpochS.value * 1000 : ''}}</div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-sm-4">
-    <div class="form-control" readonly>{{date2 | date : 'yyyy/MM/dd hh:mm:ss z' }}</div>
-  </div>
-  <div class="col-sm-4">
-    <div class="form-control" readonly>{{inputEpoch.value ? MS2S(inputEpoch.value) : ''}}</div>
-  </div>
-  <div class="col-sm-4">
+  <div class="col-xl-4 col-lg-5 col-md">
     <input class="form-control" type="number" #inputEpoch (change)="epochMSecondsToDate(inputEpoch.value)">
   </div>
 </div>

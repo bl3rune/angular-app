@@ -3,7 +3,7 @@
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
 
-$body-bg: #222222;
+$body-bg: $gray-900;
 $body-color: $light;
 $purple: #af0aed;
 $dark-purple: #700099;
@@ -13,10 +13,52 @@ $theme-colors: (
   dark-purple: $dark-purple
 );
 
+$input-bg: $dark;
+$input-disabled-bg: $gray-700;
+$input-color: $light;
+
+$input-focus-bg: $input-bg;
+$input-focus-color: $input-color;
+$input-border-width: 0;
+$input-focus-box-shadow: none;
+
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 body{
   min-width:400px;        /* Suppose you want minimum width of 1000px */
   width: auto !important;  /* Firefox will set width as auto */
   width:400px;            /* As IE6 ignores !important it will set width as 1000px; */
+}
+
+.bs-datepicker {
+  background: transparent !important;
+  box-shadow: none;
+}
+
+.bs-datepicker-container {
+
+  .is-other-month {
+    color: $gray-500 !important;
+  }
+
+  .is-highlighted,.is-highlighted * {
+    color: $dark !important;
+  }
+
+  .bs-datepicker-head {
+    background: $dark;
+  }
+
+  .bs-datepicker-body {
+    background: $gray-900;
+    border-color: $dark;
+
+    th, td.week span {
+      color: $purple !important;
+    }
+
+    td span {
+      color: $light;
+    }
+  }
 }

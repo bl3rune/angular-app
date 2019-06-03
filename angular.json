@@ -22,6 +22,7 @@
               "src/manifest.json"
             ],
             "styles": [
+              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.scss",
               "src/styles.scss",
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
             ],
@@ -77,6 +78,8 @@
             "tsConfig": "src/tsconfig.spec.json",
             "scripts": [],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
               "src/styles.scss"
             ],
             "assets": [

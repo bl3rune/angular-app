@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DiffComponent {
 
-  output: string;
+  output: string[];
 
   constructor() { }
 
@@ -22,23 +22,27 @@ export class DiffComponent {
           if (right[i] === row) {
             if (i !== rightIndex.valueOf()) {
               for (let j = rightIndex.valueOf(); j < i; j++) {
-                diffs.push('+:: ' + right[j]);
+                diffs.push('+::' + right[j]);
                 console.log('added');
               }
             }
-            diffs.push('=:: ' + right[i]);
+            diffs.push('=::' + right[i]);
             rightIndex = i + 1;
             return;
           }
         }
-        diffs.push('-:: ' + row);
+        diffs.push('-::' + row);
         console.log('removed');
       });
       for (let i = rightIndex.valueOf(); i < right.length; i++) {
-        diffs.push('+:: ' + right[i]);
+        diffs.push('+::' + right[i]);
         console.log('added');
       }
-      this.output = diffs.join('\n');
+      diffs.forEach(d => {
+        d = d.replace();
+      });
+      this.output = diffs;
+      console.log(diffs);
     }
   }
 

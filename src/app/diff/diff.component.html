@@ -7,8 +7,16 @@
     <h3 class="text-center">Compare To</h3>
     <textarea class="form-control" rows="10" #right (change)="sort(left.value, right.value)"></textarea>
   </div>
-  <div *ngIf="output" class="col-sm-12">
-      <h3 class="text-center">Output</h3>
-      <textarea class="form-control" rows="10" readonly>{{output}}</textarea>
-  </div>
+  <table *ngIf="output" class="table table-borderless table-sm table-dark col-sm-12 mt-3">
+      <thead>
+        <tr>
+          <th class="text-center" scope="col">Output</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let r of output" class="" [ngClass]="{'table-danger': r.startsWith('-::'), 'table-success': r.startsWith('+::')}">
+          <td class="py-0" [ngClass]="{'text-dark': !r.startsWith('=::')}">{{r.substring(3)}}</td>
+        </tr>
+      </tbody>
+  </table>
 </div>

@@ -9,16 +9,27 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#700099">
+  <style>
+    .loading-box {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 200px;
+      color: #f8f9fa;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+  </style>
 </head>
 
 <body style="background: #222222">
   <app-root>
-    <div style="position: fixed; top: 40%; left: 50%; transform: translate(-50%, -50%);">
+    <div class="loading-box">
+      <noscript>JS Text Tools needs JavaScript</noscript>
       <img src="./assets/icons/icon-512x512.png" style="width: 200px">
-      <h2 style="color: #f8f9fa; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif;">Lodaing...</h2>
+      <h2>Lodaing...</h2>
     </div>
   </app-root>
-  <noscript>Did you really think JS text tools was going to work without Javascript enabled? Really?</noscript>
 </body>
 
 </html>

@@ -11,8 +11,17 @@ export class DelimiterComponent {
 
   constructor() { }
 
-  replace(input: string, a: string, b: string) {
-    this.output = input.split(a).join(b);
+  replace(input: string, original: string, replaced: string) {
+    this.output = input.split(original).join(replaced);
+  }
+
+  wrapAndReplace(input: string, original: string, replaced: string, wrap: string) {
+    const array = input.split(original);
+    for (let i = 0; i < array.length; i++) {
+      array[i] = wrap + array[i] + wrap;
+    }
+    console.log(array);
+    this.output = array.join(replaced);
   }
 
 }

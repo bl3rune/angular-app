@@ -20,7 +20,6 @@ export class DelimiterComponent {
     for (let i = 0; i < array.length; i++) {
       array[i] = wrap + array[i] + wrap;
     }
-    console.log(array);
     this.output = array.join(replaced);
   }
 

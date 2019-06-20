@@ -11,7 +11,7 @@
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#700099">
   <style>
-    noscript {
+    h3 {
       width: 100%;
       text-align: center;
       color: #f8f9fa;
@@ -24,34 +24,17 @@
       left: 50%;
       transform: translate(-50%, -50%);
     }
-
-    .loader {
-      position: fixed;
-      top: 0px;
-      width: 192px;
-      height: 192px;
-      animation: load 2s linear infinite;
-      border: 1px solid transparent;
-    }
-
-    @keyframes load {
-      0% { border-bottom-color: transparent; border-left-color: #700099; border-top-color: #af0aed; border-right-color: #700099 }
-      25% { border-left-color: transparent; border-right-color: #af0aed }
-      50% { border-top-color: transparent; border-bottom-color: #af0aed }
-      75% { border-right-color: transparent; border-left-color: #af0aed }
-      100% { border-bottom-color: transparent; border-left-color: #700099; border-top-color: #af0aed; border-right-color: #700099 }
-    }
   </style>
 </head>
 
 <body style="background: #222222">
   <app-root>
     <noscript>
-      <h5>JS Text Tools needs JavaScript</h5>
+      <h3>JS Text Tools needs JavaScript</h3>
     </noscript>
     <div class="loading-box">
       <img src="./assets/icons/icon-192x192.png">
-      <div class="loader"></div>
+      <h3>Loading...</h3>
     </div>
   </app-root>
 </body>

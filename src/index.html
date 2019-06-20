@@ -27,23 +27,19 @@
 
     .loader {
       position: fixed;
-      top:-100%; right:-100%; left:-100%; bottom:-100%;
-      margin:auto;
-      border: 6px inset #700099;
-      border-radius: 50%;
-      width: 250px;
-      height: 250px;
-      animation: spin 1s linear infinite;
+      top: 0px;
+      width: 192px;
+      height: 192px;
+      animation: load 2s linear infinite;
+      border: 1px solid transparent;
     }
 
-    @keyframes spin {
-      0% {
-        transform: rotate(0deg);
-      }
-
-      100% {
-        transform: rotate(360deg);
-      }
+    @keyframes load {
+      0% { border-bottom-color: transparent; border-left-color: #700099; border-top-color: #af0aed; border-right-color: #700099 }
+      25% { border-left-color: transparent; border-right-color: #af0aed }
+      50% { border-top-color: transparent; border-bottom-color: #af0aed }
+      75% { border-right-color: transparent; border-left-color: #af0aed }
+      100% { border-bottom-color: transparent; border-left-color: #700099; border-top-color: #af0aed; border-right-color: #700099 }
     }
   </style>
 </head>

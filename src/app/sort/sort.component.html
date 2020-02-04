@@ -4,7 +4,6 @@
     <textarea class="form-control" rows="10" #input (change)="sort(input.value)"></textarea>
   </div>
   <div class="col-sm-6">
-      <h3 class="text-center">Output</h3>
-      <textarea class="form-control" rows="10" readonly>{{output}}</textarea>
+      <app-output-block [output]="output"></app-output-block>
   </div>
 </div>

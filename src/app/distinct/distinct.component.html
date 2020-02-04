@@ -4,7 +4,14 @@
     <textarea class="form-control" rows="10" #input (change)="distinct(input.value)"></textarea>
   </div>
   <div class="col-sm-6">
-      <h3 class="text-center">Output</h3>
-      <textarea class="form-control" rows="10" readonly>{{output}}</textarea>
+    <app-output-block [output]="output"></app-output-block>
+  </div>
+</div>
+<div class="row mt-3">
+  <div class="col-sm-6">
+    <app-output-block [title]="'Non Duplicates'" [output]="nonDuplicates"></app-output-block>
+  </div>
+  <div class="col-sm-6">
+    <app-output-block [title]="'Duplicates'" [output]="duplicates"></app-output-block>
   </div>
 </div>

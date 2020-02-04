@@ -1,0 +1,6 @@
+<h3 *ngIf="title" class="text-center">{{title}}</h3>
+<h3 *ngIf="!title" class="text-center">Output</h3>
+<textarea class="form-control" rows="10" #outputblock readonly>{{output}}</textarea>
+<button type="button" class="btn btn-dark btn-block" (click)="copy(outputblock)">
+  <i class="fas fa-copy text-purple"></i>
+</button>

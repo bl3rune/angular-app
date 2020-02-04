@@ -16,6 +16,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { ConverterComponent } from './converter/converter.component';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { OutputBlockComponent } from './core/output-block/output-block.component';
 
 const appRoutes: Routes = [
   { path: '', component: LandingComponent, data: { title: 'Home' } },
@@ -39,7 +40,8 @@ const appRoutes: Routes = [
     DistinctComponent,
     DiffComponent,
     SortComponent,
-    ConverterComponent
+    ConverterComponent,
+    OutputBlockComponent
   ],
   imports: [
     BrowserModule,

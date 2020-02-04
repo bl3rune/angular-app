@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SortComponent } from './sort.component';
+import { OutputBlockComponent } from '../core/output-block/output-block.component';
 
 describe('SortComponent', () => {
   let component: SortComponent;
@@ -8,7 +9,7 @@ describe('SortComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SortComponent ]
+      declarations: [ SortComponent, OutputBlockComponent ]
     })
     .compileComponents();
   }));

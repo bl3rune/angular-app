@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DistinctComponent } from './distinct.component';
+import { OutputBlockComponent } from '../core/output-block/output-block.component';
 
 describe('DistinctComponent', () => {
   let component: DistinctComponent;
@@ -8,7 +9,7 @@ describe('DistinctComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DistinctComponent ]
+      declarations: [ DistinctComponent, OutputBlockComponent ]
     })
     .compileComponents();
   }));

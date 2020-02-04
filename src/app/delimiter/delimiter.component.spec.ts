@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DelimiterComponent } from './delimiter.component';
+import { OutputBlockComponent } from '../core/output-block/output-block.component';
 
 describe('DelimiterComponent', () => {
   let component: DelimiterComponent;
@@ -8,7 +9,7 @@ describe('DelimiterComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DelimiterComponent ]
+      declarations: [ DelimiterComponent, OutputBlockComponent ]
     })
     .compileComponents();
   }));

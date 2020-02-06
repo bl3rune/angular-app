@@ -1,14 +1,14 @@
 import { AppPage } from './app.po';
 
-describe('my-app App', () => {
+describe('JSTT App', () => {
   let page: AppPage;
 
   beforeEach(() => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should exist', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    expect(page).toBeTruthy();
   });
 });

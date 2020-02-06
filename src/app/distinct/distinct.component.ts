@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-distinct',
+  selector: 'jstt-distinct',
   templateUrl: './distinct.component.html',
   styleUrls: ['./distinct.component.scss']
 })

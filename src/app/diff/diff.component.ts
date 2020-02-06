@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-diff',
+  selector: 'jstt-diff',
   templateUrl: './diff.component.html',
   styleUrls: ['./diff.component.scss']
 })
@@ -11,7 +11,7 @@ export class DiffComponent {
 
   constructor() { }
 
-  sort(a: string, b: string) {
+  diff(a: string, b: string) {
     if (a && b) {
       const left = a.split('\n');
       const right = b.split('\n');
@@ -22,27 +22,20 @@ export class DiffComponent {
           if (right[i] === row) {
             if (i !== rightIndex.valueOf()) {
               for (let j = rightIndex.valueOf(); j < i; j++) {
-                diffs.push('+::' + right[j]);
-                console.log('added');
+                diffs.push('+::' + right[j]); // ADDED
               }
             }
-            diffs.push('=::' + right[i]);
+            diffs.push('=::' + right[i]); // EQUALS
             rightIndex = i + 1;
             return;
           }
         }
-        diffs.push('-::' + row);
-        console.log('removed');
+        diffs.push('-::' + row); // REMOVED
       });
       for (let i = rightIndex.valueOf(); i < right.length; i++) {
-        diffs.push('+::' + right[i]);
-        console.log('added');
+        diffs.push('+::' + right[i]); // ADDED
       }
-      diffs.forEach(d => {
-        d = d.replace();
-      });
       this.output = diffs;
-      console.log(diffs);
     }
   }
 

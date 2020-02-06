@@ -23,4 +23,9 @@ describe('SortComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should get distinct elements', () => {
+    component.sort('a\nc\nb\ne\nd');
+    expect(component.output).toEqual('a\nb\nc\nd\ne');
+  });
 });

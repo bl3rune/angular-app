@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-output-block',
+  selector: 'jstt-output-block',
   templateUrl: './output-block.component.html',
   styleUrls: ['./output-block.component.scss']
 })

@@ -25,9 +25,9 @@ $input-focus-box-shadow: none;
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 body{
-  min-width:400px;        /* Suppose you want minimum width of 1000px */
+  min-width:300px;        /* Suppose you want minimum width of 1000px */
   width: auto !important;  /* Firefox will set width as auto */
-  width:400px;            /* As IE6 ignores !important it will set width as 1000px; */
+  width:300px;            /* As IE6 ignores !important it will set width as 1000px; */
 }
 
 .centered {

@@ -22,4 +22,9 @@ describe('DiffComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should get distinct elements', () => {
+    component.diff('a\nb\nb\nc\nc','a\nb\nc\nd\nd');
+    expect(component.output).toEqual(['=::a', '=::b', '-::b', '=::c', '-::c', '+::d', '+::d']);
+  });
 });

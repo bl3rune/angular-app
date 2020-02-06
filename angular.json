@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "my-app": {
+    "jstt": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -55,18 +55,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "my-app:build"
+            "browserTarget": "jstt:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "my-app:build:production"
+              "browserTarget": "jstt:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "my-app:build"
+            "browserTarget": "jstt:build"
           }
         },
         "test": {
@@ -106,7 +106,7 @@
         }
       }
     },
-    "my-app-e2e": {
+    "jstt-e2e": {
       "root": "e2e",
       "sourceRoot": "e2e",
       "projectType": "application",
@@ -115,7 +115,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "./protractor.conf.js",
-            "devServerTarget": "my-app:serve"
+            "devServerTarget": "jstt:serve"
           }
         },
         "lint": {
@@ -132,14 +132,14 @@
       }
     }
   },
-  "defaultProject": "my-app",
+  "defaultProject": "jstt",
   "schematics": {
     "@schematics/angular:component": {
-      "prefix": "app",
+      "prefix": "jstt",
       "styleext": "scss"
     },
     "@schematics/angular:directive": {
-      "prefix": "app"
+      "prefix": "jstt"
     }
   }
 }
